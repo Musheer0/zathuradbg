@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import Footer from '@/components/home/footer'
 import "./globals.css";
-
 const font = DM_Sans({
   subsets: ['latin-ext', 'latin']
 })
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "ZathuraDbg is an open-source GUI debugger for assembly. Learn assembly with a clean UI designed for simplicity and support for x86_64 architecture.",
   icons: {
-    icon: "/logo.png",
+    icon: "./favicon.ico",
   },
   openGraph: {
     title: "ZathuraDbg: Open-Source GUI Debugger for Assembly | Learn Assembly with Ease",
