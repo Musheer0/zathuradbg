@@ -16,7 +16,7 @@ const Hero = () => {
        The easiest GUI tool to learn and debug assembly
        </h1>
        <p className='text-sm text-zinc-500'>
-       ZathuraDbg is a fully open source emulation-based debugger powered by capstone, unicorn and keystone engine.
+       ZathuraDbg is a fully open source emulation-based debugger powered by capstone, icicle and keystone engine.
        </p>
      <div className="actions flex items-center gap-2">
      
