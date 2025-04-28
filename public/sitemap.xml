@@ -3,7 +3,7 @@
   
   <!-- Home Page -->
   <url>
-    <loc>https://zathuradbg.github.io/</loc>
+    <loc>https://www.zathura.dev/</loc>
     <lastmod>2024-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
   <!-- About Page -->
   <url>
-    <loc>https://zathuradbg.github.io/about</loc>
+    <loc>https://www.zathura.dev/#about</loc>
     <lastmod>2024-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -19,66 +19,17 @@
 
   <!-- Features Page -->
   <url>
-    <loc>https://zathuradbg.github.io/features</loc>
+    <loc>https://www.zathura.dev/#features</loc>
     <lastmod>2024-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Images Page -->
-  <url>
-    <loc>https://zathuradbg.github.io/images</loc>
-    <lastmod>2024-11-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Scroll Image Page -->
-  <url>
-    <loc>https://zathuradbg.github.io/scroll-image</loc>
-    <lastmod>2024-11-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <!-- Hero Page -->
   <url>
-    <loc>https://zathuradbg.github.io/hero</loc>
+    <loc>https://www.zathura.dev/</loc>
     <lastmod>2024-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-
-  <!-- Why Page -->
-  <url>
-    <loc>https://zathuradbg.github.io/why</loc>
-    <lastmod>2024-11-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Footer Page -->
-  <url>
-    <loc>https://zathuradbg.github.io/footer</loc>
-    <lastmod>2024-11-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Error Page -->
-  <url>
-    <loc>https://zathuradbg.github.io/error</loc>
-    <lastmod>2024-11-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Navbar Page -->
-  <url>
-    <loc>https://zathuradbg.github.io/navbar</loc>
-    <lastmod>2024-11-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
   </url>
 
 </urlset>

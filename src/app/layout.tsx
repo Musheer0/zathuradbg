@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
-import Footer from '@/components/home/footer'
 import "./globals.css";
+import Navbar from "@/components/navbar";
 const font = DM_Sans({
   subsets: ['latin-ext', 'latin']
 })
@@ -55,10 +55,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.className}  antialiased`}
+        className={`${font.className} max-w-[1600px] mx-auto overflow-x-hidden bg-black text-white w-full h-full min-h-screen antialiased`}
       >
+      <Navbar/>
         {children}
-        <Footer/>
+      
       </body>
     </html>
   );

@@ -1,57 +1,68 @@
-"use client"
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { BsStarFill } from 'react-icons/bs';
-import { motion } from 'framer-motion';
+"use client";
 
-// Define types for the API response and component state
+import React, { useEffect, useState, useRef } from 'react';
+import axios from 'axios';
+import { AnimatedNumber } from './motion-primitives/animated-numbers';
+
 interface GitHubRepo {
   stargazers_count: number;
 }
 
 const GitHubStars: React.FC = () => {
-  const [stars, setStars] = useState<number | null>(null); // Store the number of stars
-  const [loading, setLoading] = useState<boolean>(true); // Loading state
-  const [error, setError] = useState<string | null>(null); // Error state
+  const [stars, setStars] = useState<number>(0);
+  const [error, setError] = useState<string | null>(null);
+  const [hasFetched, setHasFetched] = useState<boolean>(false); // <-- new flag
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // URL of the GitHub repository API
-    const repoUrl = 'https://api.github.com/repos/ZathuraDbg/ZathuraDbg';
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting && !hasFetched) {
+          fetchStars(); // fetch when visible and not already fetched
+          setHasFetched(true);
+        }
+      },
+      { threshold:1 } // trigger when full visible
+    );
 
-    // Fetch the star count
-    axios
-      .get<GitHubRepo>(repoUrl) // Type the response using GitHubRepo interface
-      .then((response) => {
-        setStars(response.data.stargazers_count); // Get the number of stars from the response
-        setLoading(false); // Stop loading
-      })
-      .catch(() => {
-        setError('Failed to fetch stars'); // Set error message if the request fails
-        setLoading(false); // Stop loading
-      });
-  }, []);
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
 
-  // Return loading, error, or the stars count
-  if (loading) return <div className='w-20 h-5 bg-zinc-500/50 rounded-full animate-pulse'></div>;
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [hasFetched]);
+
+  const fetchStars = async () => {
+    try {
+      const repoUrl = 'https://api.github.com/repos/ZathuraDbg/ZathuraDbg';
+      const response = await axios.get<GitHubRepo>(repoUrl);
+      setStars(response.data.stargazers_count);
+    } catch {
+      setError('Failed to fetch stars');
+    } finally {
+    }
+  };
+
   if (error) return <></>;
 
   return (
-    <div className='flex items-center gap-2 w-fit rounded-full px-4 py-1 shadow-xl bg-gradient-to-b border-2 border-zinc-600 from-zinc-950 to-zinc-800'>
-      <motion.h2 
-      initial={{
-        scale: 0,
-        rotate: '360deg'
-      }}
-      animate={{
-        scale:1,
-        rotate:0
-      }}
-      transition={{
-        duration: .4,
-        ease: 'anticipate'
-      }}
-      className='text-yellow-500'><BsStarFill/></motion.h2>
-      <p className='text-zinc-50'>{stars} stars</p>
+    <div ref={ref} className='flex flex-col w-full items-center gap-2 pt-20'>
+      <p className='text-[8.2vw] relative sm:text-[7vw] md:text-[6.5vw] lg:text-[5.5vw]'>
+        <AnimatedNumber
+          springOptions={{
+            bounce: 0,
+            duration: 1000,
+          }}
+          value={stars}
+        />
+        + stars on Github
+      </p>
+      <button className='hover:underline cursor-pointer'>Add Yours Now</button>
     </div>
   );
 };

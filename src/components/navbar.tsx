@@ -1,22 +1,36 @@
-import Links from "./home/link"
-
+import { download_url } from "@/cms";
+import Image from "next/image"
+import Link from "next/link";
 const Navbar = () => {
+  const links = [
+    { name: "Home", href: "/" },
+    { name: "Features", href: "#features" },
+    { name: "About", href: "#about" },
+    // maybe add Docs, Contact, etc later
+  ];
+  
   return (
-    <nav className='md:px-20 px-5 sticky top-0  bg-zinc-50/20 backdrop-blur-xl z-10 border-b  flex items-center w-full justify-between py-5'>
-      <div className="logo flex items-center gap-2">
-      <img src="./zatura-text-light.png" alt="logo" className='h-5' />
-      </div>
-   <Links/>
-   <a href="https://github.com/ZathuraDbg/ZathuraDbg/releases">
-      <button
-      className='t bg-gradient-to-b from-zinc-950 to-zinc-900 font-semibold shadow-xl shadow-transparent transition-all duration-300 ease-in-out hover:shadow-zinc-950/15   capitalize  px-4 py-2 rounded-full'
-      > 
-         <p className='font-semibold  hover:underline cursor-pointer bg-gradient-to-t from-zinc-50  to-zinc-100 bg-clip-text text-transparent'>
-          Download
-         </p>
-      </button>
-      </a>
-    </nav>
+   <nav className="w-full sticky top-0 z-[9999] bg-black/50 backdrop-blur-lg p-2 flex border-b items-center gap-5 px-10 justify-between border-zinc-900">
+    {/* <div className="ray absolute -top-10 left-[47%] -translate-x-1/2">
+    <div className="big-glow w-7 h-[500px] -translate-y-1/2 -rotate-90 bg-indigo-600 absolute blur-3xl"></div>
+    <div className="big-glow w-6 h-[200px] -translate-y-1/2 -rotate-90 bg-indigo-500 absolute blur-3xl"></div>
+    <div className="big-glow w-8 h-[200px] -translate-y-1/2 -rotate-90 bg-indigo-50 absolute blur-2xl"></div>
+    <div className="big-glow w-8 h-[100px] -translate-y-1/2 -rotate-90 bg-indigo-50 absolute blur-xl"></div>
+    </div> */}
+    <div className="logo p-1 bg-zinc-950/10 border border-zinc-900 relative overflow-hidden rounded-lg">
+    <Image src={'/logo.webp'} width={30} height={30} alt="logo" className=""/>
+    <Image src={'/logo.webp'} width={30} height={30} alt="logo" className="absolute top-0 left-0 blur-xl mix-blend-color-dodge "/>
+    </div>
+    <div className="links ml-auto p-2 px-10 border rounded-xl hidden sm:flex items-center gap-10 border-zinc-900 ">
+      {links.map((link)=><Link href={link.href} key={link.href} className="text-zinc-600 text-sm hover:underline hover:text-zinc-100">{link.name}</Link>)}
+      <p className="text-zinc-600 text-sm hover:underline hover:text-zinc-100">Socials</p>
+    </div>
+    <div className="p-1  border border-zinc-900 relative overflow-hidden rounded-xl">
+<a href={download_url}>
+<button className="text-sm font-semibold tracking-wide bg-indigo-700 shadow-inner  shadow-white/50 hover:bg-indigo-600 cursor-pointer px-5 py-2 rounded-xl">Download</button>
+</a>
+    </div>
+   </nav>
   )
 }
 

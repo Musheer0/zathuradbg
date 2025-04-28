@@ -1,7 +1,8 @@
+"use client"
 import Link from 'next/link';
 import React from 'react';
 
-const ErrorPage: React.FC = () => {
+const ErrorPage= () => {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="text-center p-5 max-w-xs mx-auto">
