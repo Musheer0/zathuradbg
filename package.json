@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-three/fiber": "^9.1.2",
+    "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "axios": "^1.8.4",
     "class-variance-authority": "^0.7.1",

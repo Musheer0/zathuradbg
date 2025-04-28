@@ -5,6 +5,68 @@
 html{
   scroll-behavior:smooth;
 }
+
+.scroll-fade{
+  animation: fade-in 1s ease-out forwards;
+  animation-timeline: view();
+  animation-range: cover 100% cover 100%;
+}
+nav{
+  transform: translateY(-100%);
+  animation: slide-down 1s forwards;
+  animation-delay: 0.2s;
+
+}
+.fadein {
+  opacity: 0;
+  animation: fade-in 1s forwards ;
+  animation-delay: 0.5s;
+}
+.fadeinhalf {
+  opacity: 0;
+  animation: fade-in-half 1s forwards ;
+  animation-delay: 0.5s;
+}
+.slideout {
+  opacity: 0;
+  animation:slide-out 2s forwards ;
+  animation-delay: 0.5s;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in-half {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes slide-out {
+  0% {
+    opacity: 1;
+    left: -50%;
+  }
+  100% {
+    opacity: 0.9;
+    left: 110%;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 :root {
   --primary-purple: #A020F0;
   --electric-blue: #00BFFF;

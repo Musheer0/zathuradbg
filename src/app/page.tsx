@@ -5,10 +5,14 @@ import GitHubStars from '@/components/stars';
 import { CanvasRevealEffectCard } from '@/components/ui/canvas-revel-card';
 import Image from 'next/image';
 import Footer from '@/components/home/footer';
+import FAQSection from '@/components/home/faqs';
+import { links } from '@/components/navbar';
+import Link from 'next/link';
 
 export default function page() {
   return (
    <>
+
    <Home/>
    <GitHubStars/>
    <div className='w-full bg-black flex flex-col gap-10 items-center px-4 pt-20 pb-10'>
@@ -40,6 +44,16 @@ export default function page() {
    </div>
    <Features/>
    <AboutZatura/>
+   <FAQSection/>
+   <div className="fixed bottom-4 left-4 right-4 mx-auto max-w-md border-t border-zinc-800 bg-black/70 backdrop-blur-lg p-2 flex justify-around items-center md:hidden z-50 rounded-2xl shadow-lg">
+  {links.map((link) => (
+    <Link href={link.href} key={link.href} className="flex flex-col items-center text-xs text-zinc-400 hover:text-zinc-100">
+      <link.icon size={20} />
+      <span>{link.name}</span>
+    </Link>
+  ))}
+</div>
+
    <Footer/>
    </>
   );

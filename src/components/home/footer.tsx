@@ -2,20 +2,22 @@ import { FaXTwitter } from "react-icons/fa6";
 import { BsGithub } from 'react-icons/bs'
 import { TextHoverEffect } from "../ui/text-hover-effect";
 import Image from "next/image";
-
+export const socials = [
+  {
+    icon:FaXTwitter,
+    href: 'https://x.com/ZathuraDbg',
+    name: 'Twitter/X'
+  },
+  {
+    icon:BsGithub,
+    href:'https://github.com/ZathuraDbg',
+    name: 'Github'
+  }
+]
 const Footer = () => {
-  const socials = [
-    {
-      icon:FaXTwitter,
-      href: 'https://x.com/ZathuraDbg'
-    },
-    {
-      icon:BsGithub,
-      href:'https://github.com/ZathuraDbg'
-    }
-  ]
+ 
   return (
-    <div className=" w-full h-[400px] relative border-t border-zinc-900">
+    <div className=" w-full  h-[400px] relative border-t border-zinc-900">
       <div className="links pt-10 gap-10 flex items-center justify-between px-4 flex-wrap">
      <div className="logo flex items-center gap-2">
      <Image src={'/logo.webp'} width={35} height={35} alt="logo"/>
@@ -41,7 +43,7 @@ const Footer = () => {
      </div>
     </div>
      </div>
-     <div className="h-full w-full  ">
+     <div className="h-full min-h-[500px]  overflow-hidden w-full  ">
      <TextHoverEffect text="ZATHURA"/>
      </div>
     

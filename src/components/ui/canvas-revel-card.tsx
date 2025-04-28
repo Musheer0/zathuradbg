@@ -24,7 +24,7 @@ export function CanvasRevealEffectCard({children,className, colors}:{children:Re
           >
             <CanvasRevealEffect
               animationSpeed={5}
-              containerClassName="bg-black"
+              containerClassName="bg-transparent"
               colors={colors ||[
                 [59, 130, 246],
                 [139, 92, 246],

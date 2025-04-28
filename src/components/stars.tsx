@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { AnimatedNumber } from './motion-primitives/animated-numbers';
+import { contribute } from '@/cms';
 
 interface GitHubRepo {
   stargazers_count: number;
@@ -62,7 +63,9 @@ const GitHubStars: React.FC = () => {
         />
         + stars on Github
       </p>
+      <a href={contribute}>
       <button className='hover:underline cursor-pointer'>Add Yours Now</button>
+      </a>
     </div>
   );
 };
