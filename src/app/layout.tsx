@@ -58,6 +58,7 @@ export default function RootLayout({
       <body
         className={`${font.className} max-w-[1600px] mx-auto overflow-x-hidden bg-black text-white w-full h-full min-h-screen antialiased`}
       >
+        <Analytics/>
       <Navbar/>
         {children}
       
