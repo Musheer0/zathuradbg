@@ -82,7 +82,7 @@ const Features = () => {
               Intel x86_64 Support
             </p>
             <p className='text-sm text-zinc-400'>
-              Ready for real-world assembly learning.
+              ZathuraDbg supports x86_64, ARM32, Thumbv7m, and AArch64—with more architectures coming soon.
             </p>
           </Button>
         </motion.div>
