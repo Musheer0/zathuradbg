@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "../ui/moving-border";
-import { CanvasRevealEffectCard } from "../ui/canvas-revel-card";
 import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 import { FAQs } from "@/cms";
 
