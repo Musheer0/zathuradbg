@@ -32,12 +32,6 @@ Currently, it supports **Intel x86_64**, **ARM 32-bit**, **Thumbv7m**, and **AAr
 
 ---
 
-## 🎥 Preview Video
-
-[▶️ Watch Time Travel Debugging](https://www.zathura.dev/timetravel.mp4)
-
----
-
 ## ❓ Frequently Asked Questions
 
 ### Can ZathuraDbg debug binaries?
