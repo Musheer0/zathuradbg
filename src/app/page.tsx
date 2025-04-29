@@ -33,7 +33,7 @@ export default function page() {
                [255, 255, 255],
                [210, 255, 255],
               ]} className="card relative p-10 border cursor-pointer border-zinc-800 rounded-xl flex items-center gap-4"> 
-      <Image src={'/placeholder.png'} title='no image found' width={50} className='z-20 object-cover' height={50} alt='keystone engine'/>
+      <Image src={'/icicle.png'} title='no image found'  width={40} className='z-20 object-cover' height={40} alt='keystone engine'/>
       <p className='text-zinc-300 z-20'>Icicle Engine</p>
       </CanvasRevealEffectCard>
       <div >
