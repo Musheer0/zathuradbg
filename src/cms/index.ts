@@ -1,4 +1,4 @@
-export const announcment = 'ZathuraDbg 0.5.0 is out ';
+export const announcment = 'ZathuraDbg 0.5.0 is out';
 export const download_url = 'https://github.com/ZathuraDbg/ZathuraDbg/releases';
 export const contribute = 'https://github.com/ZathuraDbg/ZathuraDbg';
 export const about = ` ZathuraDbg is an open-source,
@@ -11,7 +11,7 @@ export const main_title_sub = `ZathuraDbg is a fully open source emulation-based
 export const FAQs = [
   {
     question: "Can ZathuraDbg debug binaries?",
-    answer: "No, ZathuraDbg does not support debugging binaries at the moment. This feature is planned for a future release.",
+    answer: "No, ZathuraDbg does not support debugging binaries at the moment. This feature may be added in a future release.",
   },
   {
     question: "Does ZathuraDbg support syscalls and OS-level APIs?",
@@ -19,7 +19,7 @@ export const FAQs = [
   },
   {
     question: "Which architectures are currently supported in ZathuraDbg?",
-    answer: "ZathuraDbg currently supports Intel x86_64, ARM 32-bit, Thumbv7m, and AArch64 architectures.",
+    answer: "ZathuraDbg currently supports Intel x86_64, ARM 32-bit, Thumbv7m, and AArch64 architectures. Support for other architectures is under development.",
   },
   {
     question: "What is the primary goal of ZathuraDbg?",
