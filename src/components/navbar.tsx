@@ -9,7 +9,7 @@ import {
   HelpCircle,
 } from 'lucide-react';
 export const links = [
-  { name: 'Home', href: '/', icon: Home },
+  { name: 'Home', href: '#home', icon: Home },
   { name: 'Features', href: '#features', icon: Sparkles },
   { name: 'About', href: '#about', icon: Info },
   { name: 'FAQs', href: '#faq', icon: HelpCircle },
@@ -17,7 +17,7 @@ export const links = [
 const Navbar = () => {
 
   return (
-   <nav className="w-full sticky top-0 z-[9999] bg-black/50 backdrop-blur-lg p-2 flex border-b items-center gap-5 px-3 sm:px-10 justify-between border-zinc-900">
+   <nav className="w-full sticky top-0 z-[9999] bg-black/50 sm:overflow-visible overflow-hidden backdrop-blur-lg p-2 flex border-b items-center gap-5 px-3 sm:px-10 justify-between border-zinc-900">
     <div className="ray absolute -top-10 left-[47%] -translate-x-1/2">
     <div className="big-glow w-7 h-[500px] -translate-y-1/2 -rotate-90 bg-indigo-600 absolute blur-3xl"></div>
     <div className="big-glow w-6 h-[200px] -translate-y-1/2 -rotate-90 bg-indigo-500 absolute blur-3xl"></div>

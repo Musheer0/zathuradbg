@@ -17,7 +17,7 @@ export const socials = [
 const Footer = () => {
  
   return (
-    <div className=" w-full  h-[400px] relative border-t border-zinc-900">
+    <div className=" w-full  h-full pb-20 mb:pb-0 md:h-[400px] relative border-t border-zinc-900">
       <div className="links pt-10 gap-10 flex items-center justify-between px-4 flex-wrap">
      <div className="logo flex items-center gap-2">
      <Image src={'/logo.webp'} width={35} height={35} alt="logo"/>
@@ -43,7 +43,7 @@ const Footer = () => {
      </div>
     </div>
      </div>
-     <div className="h-full min-h-[500px]  overflow-hidden w-full  ">
+     <div className="h-full min-h-[500px] md:flex hidden overflow-hidden w-full  ">
      <TextHoverEffect text="ZATHURA"/>
      </div>
     

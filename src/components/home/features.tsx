@@ -95,7 +95,7 @@ const Features = () => {
           variants={fadeInWithScale}
           className="l3 w-fit group md:hover:to-transparent hover:h-[470px] md:hover:h-[690px] h-[420px] transition-all duration-200 p-2 relative bg-gradient-to-b from-transparent to-indigo-700 rounded-xl overflow-hidden"
         >
-          <div className="info group-hover:left-0 pointer-events-none absolute top-0 p-3 pl-10 w-full flex flex-col pt-10 h-1/2">
+          <div className="info group-hover:left-0 pointer-events-none absolute top-0 p-3 pl-5 w-full flex flex-col pt-10 h-1/2">
             <p className='text-2xl font-semibold leading-none max-w-2xl'>
               Time Travel Debugging with ZathuraDbg: Step Back Instantly with Minimal Overhead
             </p>
@@ -104,7 +104,7 @@ const Features = () => {
             </p>
           </div>
 
-          <div className='relative translate-x-10 group transition-all duration-300 ease-in-out hover:translate-x-0 md:hover:translate-y-0 delay-1 translate-y-[30vh] sm:translate-y-[40%] md:translate-y-1/3 lg:translate-y-1/4 rounded-lg overflow-hidden'>
+          <div className='relative translate-x-5 group transition-all duration-300 ease-in-out hover:translate-x-0 md:hover:translate-y-0 delay-1 translate-y-[35vh] sm:translate-y-[40%] md:translate-y-1/3 lg:translate-y-1/4 rounded-lg overflow-hidden'>
             <div className="overlay hidden sm:flex absolute top-0 left-0 w-full h-full bg-black/50 pt-20 group-hover:opacity-0 pointer-events-none transition-all duration-300 ease-in-out justify-center">
               <p className='bg-white h-fit text-black px-4 py-1 rounded-full'>Hover/Tap to watch demo</p>
             </div>

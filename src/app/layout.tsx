@@ -55,8 +55,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta  name="viewport " content="width=device-width, initial-scale-1.0"/>
       <body
-        className={`${font.className} max-w-[1600px] mx-auto overflow-x-hidden bg-black text-white w-full h-full min-h-screen antialiased`}
+        className={`${font.className}  mx-auto overflow-x-hidden bg-black text-white w-full h-full min-h-screen antialiased`}
       >
         <Analytics/>
       <Navbar/>

@@ -1,7 +1,7 @@
 import { announcment, contribute, download_url, main_title, main_title_sub } from "@/cms"
 const Home = () => {
   return (
-   <div className="w-full h-full min-h-screen flex items-center justify-center p-2  flex-col relative">
+   <div id="home" className="w-full h-full min-h-screen overflow-x-hidden flex items-center justify-center p-2  flex-col relative">
     <div className="hidden lg:block absolute h-full w-2 bg-white left-0 origin-top blur-xl -rotate-45 fadeinhalf"></div>
 <div className="hidden lg:block absolute h-full w-2 bg-white left-40 origin-top blur-xl -rotate-45 fadeinhalf"></div>
 <div className="hidden lg:block absolute h-full w-2 bg-white right-0 origin-top blur-xl rotate-45 fadeinhalf"></div>
@@ -47,7 +47,7 @@ const Home = () => {
     <div className="absolute w-1/2 h-full -translate-x-1/2 left-1/2 top-0 blur-3xl bg-indigo-600/30 "></div>
     <img src="/noise.png" className='absolute opacity-[0.01]  z-10 [mask-image:radial-gradient(#fff,transparent,75%)] top-0 left-0 w-full h-full object-cover' alt="" />
 
-    <img src="/screenshot2.webp" alt=""  className="rounded-xl relative "/>
+    <img src="/screenshot2.webp" alt=""  className="rounded-xl relative scale-in "/>
     <div className="absolute w-1/2   rounded-full -translate-x-1/2 left-1/2 h-1/2 top-0 blur-3xl bg-indigo-600/20"></div>
 
     </div>

@@ -45,13 +45,16 @@ export default function page() {
    <Features/>
    <AboutZatura/>
    <FAQSection/>
-   <div className="fixed bottom-4 left-4 right-4 mx-auto max-w-md border-t border-zinc-800 bg-black/70 backdrop-blur-lg p-2 flex justify-around items-center md:hidden z-50 rounded-2xl shadow-lg">
+ 
+<div className='fixed bottom-4 px-2 w-full'>
+<div className="  mx-auto  w-full overflow-hidden border-t border-zinc-800 bg-black/70 backdrop-blur-lg p-2 flex justify-between items-center md:hidden z-50 rounded-2xl shadow-lg">
   {links.map((link) => (
     <Link href={link.href} key={link.href} className="flex flex-col items-center text-xs text-zinc-400 hover:text-zinc-100">
-      <link.icon size={20} />
-      <span>{link.name}</span>
+      <link.icon size={15} />
+      <span className='text-xs'>{link.name}</span>
     </Link>
   ))}
+</div> 
 </div>
 
    <Footer/>

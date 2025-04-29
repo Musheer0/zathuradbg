@@ -11,48 +11,49 @@ interface GitHubRepo {
 
 const GitHubStars: React.FC = () => {
   const [stars, setStars] = useState<number>(0);
+  const [cachestars, setCacheStars] = useState<number>(0);
   const [error, setError] = useState<string | null>(null);
-  const [hasFetched, setHasFetched] = useState<boolean>(false); // <-- new flag
   const ref = useRef<HTMLDivElement>(null);
 
+  // Fetch on mount and cache the value
+  useEffect(() => {
+    const fetchStars = async () => {
+      try {
+        const repoUrl = 'https://api.github.com/repos/ZathuraDbg/ZathuraDbg';
+        const response = await axios.get<GitHubRepo>(repoUrl);
+        setCacheStars(response.data.stargazers_count);
+      } catch {
+        setError('Failed to fetch stars');
+      }
+    };
+
+    fetchStars();
+  }, []);
+
+  // Animate only when in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
-        if (entry.isIntersecting && !hasFetched) {
-          fetchStars(); // fetch when visible and not already fetched
-          setHasFetched(true);
+        if (entry.isIntersecting && cachestars > 0) {
+          setStars(cachestars); // use cached value for animation
+          observer.disconnect();
         }
       },
-      { threshold:1 } // trigger when full visible
+      { threshold: 0.1 }
     );
 
     if (ref.current) {
       observer.observe(ref.current);
     }
 
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, [hasFetched]);
+    return () => observer.disconnect();
+  }, [cachestars]);
 
-  const fetchStars = async () => {
-    try {
-      const repoUrl = 'https://api.github.com/repos/ZathuraDbg/ZathuraDbg';
-      const response = await axios.get<GitHubRepo>(repoUrl);
-      setStars(response.data.stargazers_count);
-    } catch {
-      setError('Failed to fetch stars');
-    } finally {
-    }
-  };
-
-  if (error) return <></>;
+  if (error) return null;
 
   return (
-    <div ref={ref} className='flex flex-col w-full items-center gap-2 pt-20'>
+    <div ref={ref} className='flex flex-col w-full items-center gap-2 pt-10 sm:pt-16 md:pt-20'>
       <p className='text-[8.2vw] relative sm:text-[7vw] md:text-[6.5vw] lg:text-[5.5vw]'>
         <AnimatedNumber
           springOptions={{
@@ -64,7 +65,7 @@ const GitHubStars: React.FC = () => {
         + stars on Github
       </p>
       <a href={contribute}>
-      <button className='hover:underline cursor-pointer'>Add Yours Now</button>
+        <button className='hover:underline cursor-pointer'>Add Yours Now</button>
       </a>
     </div>
   );

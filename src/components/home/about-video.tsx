@@ -26,7 +26,7 @@ const AboutVideo = () => {
      dragSnapToOrigin
            drag 
      style={{scale:scalereverse}}
-     className="floatingcard absolute top-1/8 right-20 rotate-12">
+     className="floatingcard absolute hidden sm:flex top-1/8 right-20 rotate-12">
             <Image      draggable={false}
  src={'/bento/bento(2)dark.png'} width={150} height={100} alt='bento'/>
         </motion.div>
@@ -42,21 +42,21 @@ const AboutVideo = () => {
      dragSnapToOrigin
            drag 
      style={{scale:scalereverse}}
-     className="floatingcard absolute top-1/7 left-20 -rotate-12">
+     className="floatingcard hidden sm:flex absolute top-1/7 left-20 -rotate-12">
             <Image 
              draggable={false}
             src={'/bento/bento(4)dark.png'} width={150} height={100} alt='bento'/>
         </motion.div>
      <div 
     style={{paddingTop:paddingtop+'px'}}
-    className='w-full hidden pointer-events-none relative mx-auto  items-center  justify-center md:flex '>
+    className='w-full hidden  relative mx-auto  items-center  justify-center md:flex '>
      <motion.div
      ref={videoRef}
     style={{scale:scale}}
 
      >
        
-     <video src="timetravel.mp4" className='rounded-2xl ' autoPlay loop muted></video>
+     <video controls src="timetravel.mp4" className='rounded-2xl z-10 ' poster='/screenshot1.webp' loop muted></video>
      </motion.div>
     </div>
    </div>
