@@ -79,7 +79,7 @@ const Features = () => {
           <Button duration={5000} as={'div'} className="No Setup Needed px-5 py-10 rounded-xl border-zinc-800 border">
             <img src="/cpu.png" className='w-full h-[260px] mx-auto object-contain lg:object-cover max-w-md mix-blend-screen' alt="" />
             <p className='text-lg font-semibold pt-2'>
-              Intel x86_64 Support
+              Multi architecture support
             </p>
             <p className='text-sm text-zinc-400'>
               ZathuraDbg supports x86_64, ARM32, Thumbv7m, and AArch64—with more architectures coming soon.
