@@ -7,7 +7,7 @@ export const about = ` ZathuraDbg is an open-source,
   looking to explore the depths of assembly programming.`;
 // use <br/> to move the text to new line
 export const main_title = `The easiest GUI tool to <br/> learn and debug assembly`;
-export const main_title_sub = `ZathuraDbg is a fully open source emulation-based debugger powered by capstone, icicle and keystone engine.`;
+export const main_title_sub = `ZathuraDbg is a fully open source emulation-based debugger powered by icicle, capstone engine and keystone engine.`;
 export const FAQs = [
   {
     question: "Can ZathuraDbg debug binaries?",
