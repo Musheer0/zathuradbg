@@ -11,7 +11,6 @@ const FAQSection = () => (
  <InfiniteSlider className="w-full h-full flex items-center justify-center gap-4" speedOnHover={10}>
      {FAQs.map((faq, index) => (
        <Button key={index}  duration={(index+3)*1000}  className="h-full shrink-0" containerClassName="shrink-0"    as={'div'}>
-         <CanvasRevealEffectCard className="h-full bg-transparent">
          <div
      
      className="border h-full max-w-md border-zinc-900  p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out"
@@ -23,7 +22,7 @@ const FAQSection = () => (
        {faq.answer}
      </div>
    </div>
-         </CanvasRevealEffectCard>
+
        </Button>
       ))}
      </InfiniteSlider>
