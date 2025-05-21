@@ -1,4 +1,4 @@
-export const announcment = 'ZathuraDbg 0.5.0 is out';
+export const announcment = 'ZathuraDbg 1.0 is out';
 export const download_url = 'https://github.com/ZathuraDbg/ZathuraDbg/releases';
 export const contribute = 'https://github.com/ZathuraDbg/ZathuraDbg';
 export const about = ` ZathuraDbg is an open-source,
@@ -15,7 +15,7 @@ export const FAQs = [
   },
   {
     question: "Does ZathuraDbg support syscalls and OS-level APIs?",
-    answer: "Currently, ZathuraDbg does not fully support syscalls and OS-level APIs, but implementation for common syscalls is under development.",
+    answer: "Currently, ZathuraDbg does not fully support a ton of syscalls and OS-level APIs, but implementation for common syscalls is under development.",
   },
   {
     question: "Which architectures are currently supported in ZathuraDbg?",
