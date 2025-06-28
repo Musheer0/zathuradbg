@@ -4,6 +4,6 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       { userAgent: "*", allow: "/" },
     ],
-    sitemap: "https://zathuradbg.github.io/sitemap.xml",
+    sitemap: "https://zathura.dev/sitemap.xml",
   };
 }

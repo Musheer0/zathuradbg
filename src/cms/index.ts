@@ -28,5 +28,5 @@ export const FAQs = [
   {
     question: "Is ZathuraDbg open-source?",
     answer: "Yes, ZathuraDbg is open-source and freely available to anyone interested in exploring or contributing to the project.",
-  }
+  },
 ];

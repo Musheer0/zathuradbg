@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
-import Navbar from "@/components/navbar";
+
 const font = DM_Sans({
   subsets: ['latin-ext', 'latin']
 })
@@ -54,13 +54,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+<link rel="preload" as="image" href="/logo.webp" type="image/webp" />
       <meta  name="viewport " content="width=device-width, initial-scale-1.0"/>
       <body
+      suppressHydrationWarning
         className={`${font.className}  mx-auto overflow-x-hidden bg-black text-white w-full h-full min-h-screen antialiased`}
       >
         <Analytics/>
-      <Navbar/>
+     
         {children}
       
       </body>

@@ -56,7 +56,7 @@ const AboutVideo = () => {
 
      >
        
-     <video controls src="timetravel.mp4" className='rounded-2xl z-10 ' poster='/screenshot1.webp' loop muted></video>
+     <video controls src="https://ahabc4qhgr.ufs.sh/f/zhhO2tdBhXmdQOPxARWcerTIC0N3sM8zgiShxDGZbHkmLdwc" className='rounded-2xl z-10 ' poster='/screenshot1.webp' loop muted></video>
      </motion.div>
     </div>
    </div>

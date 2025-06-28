@@ -12,7 +12,7 @@ const Features = () => {
   const l3 = useInView(l3ref,{once:true});
 
   const fadeInWithScale = {
-    hidden: { opacity: 0, scale: 0.95 },
+    hidden: { opacity: 0.5, scale: 0.95 },
     visible: { opacity: 1, scale: 1, transition: { duration: 1 } }
   };
 
@@ -109,7 +109,7 @@ const Features = () => {
               <p className='bg-white h-fit text-black px-4 py-1 rounded-full'>Hover/Tap to watch demo</p>
             </div>
 
-            <video src="/timetravel2.mp4" muted autoPlay loop className='rounded-xl h-full overflow-hidden p-0.5 bg-indigo-950 '></video>
+            <video src="https://ahabc4qhgr.ufs.sh/f/zhhO2tdBhXmdho6RIJyd8pFzUAlE7G0R4fSWHuTX6inKDJgL" muted autoPlay loop className='rounded-xl h-full overflow-hidden p-0.5 bg-indigo-950 '></video>
           </div>
         </motion.div>
       </div>
