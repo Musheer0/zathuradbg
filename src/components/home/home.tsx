@@ -1,7 +1,7 @@
 import { announcment, contribute, download_url, main_title, main_title_sub } from "@/cms"
 const Home = () => {
   return (
-   <div id="home" className="w-full h-full min-h-screen overflow-x-hidden flex items-center justify-center p-2  flex-col relative">
+   <div id="home" className="w-full h-full min-h-screen overflow-hidden sm:overflow-x-hidden flex items-center justify-center p-2  flex-col relative">
     <div className="hidden lg:block absolute h-full w-2 bg-white left-0 origin-top blur-xl -rotate-45 fadeinhalf"></div>
 <div className="hidden lg:block absolute h-full w-2 bg-white left-40 origin-top blur-xl -rotate-45 fadeinhalf"></div>
 <div className="hidden lg:block absolute h-full w-2 bg-white right-0 origin-top blur-xl rotate-45 fadeinhalf"></div>

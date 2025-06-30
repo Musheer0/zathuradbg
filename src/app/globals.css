@@ -217,3 +217,26 @@ nav{
   /* outline: 1px solid red; */
   box-sizing: border-box;
 }
+
+/* Target the entire scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px; /* For horizontal scrollbars */
+}
+
+/* Background of the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #09002a;
+  border-radius: 10px;
+}
+
+/* The draggable part */
+::-webkit-scrollbar-thumb {
+  background: #3001a6;
+  border-radius: 10px;
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #584fff;
+}

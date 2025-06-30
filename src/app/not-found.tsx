@@ -23,7 +23,7 @@ export default function NotFound() {
   const [currentMemory, setCurrentMemory] = useState(0)
   const [glitchActive, setGlitchActive] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(false)
-
+ const [isMounted,setIsMounted] = useState(false);
   useEffect(() => {
     const lines = [
         "$ ./assemble-debugger --load program.asm",
@@ -31,7 +31,6 @@ export default function NotFound() {
         "✓ Program loaded successfully",
         "$ run",
         "Starting execution...",
-        "website author: this 404 was developed by v0",
       "✗ Segmentation fault at 0x00001337",
       "✗ Process terminated with exit code 404",
       "$ status",
@@ -48,7 +47,7 @@ export default function NotFound() {
     }, 800)
 
     return () => clearInterval(interval)
-  }, [])
+  }, []);
 
   useEffect(() => {
     const memoryInterval = setInterval(() => {
@@ -64,8 +63,13 @@ export default function NotFound() {
       clearInterval(memoryInterval)
       clearInterval(glitchInterval)
     }
-  }, [])
+  }, []);
 
+  //Hydration issu fix
+  useEffect(()=>{
+    setIsMounted(true)
+  },[])
+if(isMounted)
   return (
     <div
       className={`${jetbrainsMono.variable} ${orbitron.variable} min-h-screen bg-zinc-950 text-green-400 font-mono overflow-hidden relative`}
@@ -163,7 +167,7 @@ export default function NotFound() {
           initial={{ x: -300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="hidden lg:block w-80 border-r border-zinc-800 bg-zinc-900 overflow-y-auto"
+          className="hidden lg:block w-80 h-full min-h-screen border-r border-zinc-800 bg-zinc-900 overflow-y-auto"
         >
           <MemoryPanel currentMemory={currentMemory} />
         </motion.div>
