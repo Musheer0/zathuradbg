@@ -15,7 +15,7 @@ export default function page() {
       <MobileNav/>
    <Home/>
    <GitHubStars/>
-    <TechStackCards/>
+  <TechStackCards/>
    <Features/>
    <AboutZatura/>
    <FAQSection/>
