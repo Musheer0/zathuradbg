@@ -1,10 +1,12 @@
 import { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "ZathuraDbg",
     short_name: "ZathuraDbg",
-    description: "The easiest GUI tool to learn and debug assembly",
+    description: "A modern, powerful Assembly Debugger for Reverse Engineers and Developers",
     start_url: "/",
     scope: "/",
     display: "standalone",

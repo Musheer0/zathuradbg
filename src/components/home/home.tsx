@@ -1,4 +1,4 @@
-import { announcment, contribute, download_url, main_title, main_title_sub } from "@/cms"
+import { announcment, download_url, main_title, main_title_sub, try_now } from "@/cms"
 const Home = () => {
   return (
    <div id="home" className="w-full h-full min-h-screen overflow-hidden sm:overflow-x-hidden flex items-center justify-center p-2  flex-col relative">
@@ -18,7 +18,7 @@ const Home = () => {
 
     <h1
     dangerouslySetInnerHTML={{__html:main_title}}
-    className="text-[9vw] relative sm:text-[7vw] md:text-[6.5vw] lg:text-[5.5vw] text-transparent bg-clip-text bg-gradient-to-b from-white via-indigo-50 py-2 to-indigo-500 leading-none  text-center"/>
+    className="text-[7.5vw] relative sm:text-[5.2vw] md:text-[4.6vw] lg:text-[4.2vw] text-transparent bg-clip-text bg-gradient-to-b from-white via-indigo-50 py-2 to-indigo-500 leading-[1.1]  text-center"/>
 
     <p className="max-w-xl text-sm pt-3 text-center text-zinc-300" >
 {main_title_sub}
@@ -29,8 +29,8 @@ const Home = () => {
     <button className="shadow-inner cursor-pointer shadow-zinc-300 text-black bg-white or-pointer px-5 py-2 rounded-xl">Download</button>
     </a>
     </div>
-    <a href={contribute}>
-    <button className="  shadow-inner cursor-pointer border border-transparent hover:border-zinc-300/30 transition-all duration-300 shadow-zinc-300/20  or-pointer px-5 py-2 rounded-xl">Contribute</button>
+    <a href={try_now}>
+    <button className="  shadow-inner cursor-pointer border border-transparent hover:border-zinc-300/30 transition-all duration-300 shadow-zinc-300/20  or-pointer px-5 py-2 rounded-xl">Try now</button>
     </a>
    </div>
    <div className="absolute w-full h-1/2 top-0 rounded-full  -translate-x-1/2 left-1/2 blur-3xl mix-blend-lighten bg-indigo-600/5"></div>
